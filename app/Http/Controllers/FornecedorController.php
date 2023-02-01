@@ -16,11 +16,12 @@ class FornecedorController extends Controller
             1 =>[
                 'nome' => 'Fornecedor 2',
                 'status' => 'S',
-                'cnpj' => '001' 
+                // 'cnpj' => '' 
             ]
         ];
 
-        
+        // if ternario
+        // isset($fornecedores[1]['cnpj']) ? 'cnpj informado': 'cnpj nao informado';    
 
         return view('app.Fornecedor.index', compact('fornecedores'));
     }

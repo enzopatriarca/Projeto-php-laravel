@@ -23,8 +23,22 @@
     {{-- @dd($fornecedores) --}}
 
     @isset($fornecedores)
-        @dd($fornecedores)    
+        @for ($i = 0; isset($fornecedores[$i]); $i++)
+            <br>
+            Fornecedor: {{$fornecedores[$i]['nome']}}
+            <br>
+            Status: {{$fornecedores[$i]['status']}}
+            <br>
+            CNPJ: {{$fornecedores[$i]['cnpj']?? 'Dado nao foi preenchido'}}
+            <hr>
+        @endfor
+        {{-- @dd($fornecedores)     --}}
+
     @endisset
+
+    <br>
+
+
 
 </body>
 </html>
