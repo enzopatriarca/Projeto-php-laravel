@@ -1,74 +1,52 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('site.layouts.basico')
+@section('titulo','Home')
 
-        <title>Laravel</title>
+@section('conteudo')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+<div class="conteudo-destaque">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    <div class="esquerda">
+        <div class="informacoes">
+            <h1>Sistema Super Gestão</h1>
+            <p>Software para gestão empresarial ideal para sua empresa.<p>
+            <div class="chamada">
+                <img src="{{asset('img/check.png')}}">
+                <span class="texto-branco">Gestão completa e descomplicada</span>
+            </div>
+            <div class="chamada">
+                <img src="{{asset('img/check.png')}}">
+                <span class="texto-branco">Sua empresa na nuvem</span>
+            </div>
+        </div>
 
-            .full-height {
-                height: 100vh;
-            }
+        <div class="video">
+            <img src="{{asset('img/player_video.jpg')}} ">
+        </div>
+    </div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Welcome</h1>
-        <ul>
-            <li><a href="{{route('site.index')}}">Home</a></li>
-            <li><a href="{{route('site.sobrenos')}}">Sobre Nos</a></li>
-            <li><a href="{{route('site.contatos')}}">Contatos</a></li>
-        </ul>
-    </body>
-</html>
+    <div class="direita">
+        <div class="contato">
+            <h1>Contato</h1>
+            <p>Caso tenha qualquer dúvida por favor entre em contato com nossa equipe pelo formulário abaixo.<p>
+            <form>
+                <input type="text" placeholder="Nome" class="borda-branca">
+                <br>
+                <input type="text" placeholder="Telefone" class="borda-branca">
+                <br>
+                <input type="text" placeholder="E-mail" class="borda-branca">
+                <br>
+                <select class="borda-branca">
+                    <option value="">Qual o motivo do contato?</option>
+                    <option value="">Dúvida</option>
+                    <option value="">Elogio</option>
+                    <option value="">Reclamação</option>
+                </select>
+                <br>
+                <textarea class="borda-branca">Preencha aqui a sua mensagem</textarea>
+                <br>
+                <button type="submit" class="borda-branca">ENVIAR</button>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection

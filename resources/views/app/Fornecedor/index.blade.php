@@ -36,9 +36,14 @@
 
     @endisset
 
-    <br>
-
-
-
+    {{-- @foreach ($fornecedores as $fornecedor)
+        <br>
+        Fornecedor: {{$fornecedor['nome']}}
+        <br>
+        Status: {{$fornecedor['status']}}
+        <br>
+        CNPJ: {{$fornecedor['cnpj']?? 'Dado nao foi preenchido'}}
+        <hr>
+    @endforeach --}}
 </body>
 </html>
