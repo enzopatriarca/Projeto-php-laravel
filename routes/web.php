@@ -20,6 +20,7 @@ Route::get('/sobre-nos', 'SobreController@index')->name('site.sobrenos');
 
 
 Route::get('/contatos', 'ContatosController@index')->name('site.contatos');
+Route::post('/contatos_send', 'ContatosController@contato')->name('site.contatosPost');
 
 Route::get('/login', function(){
     return "login";
